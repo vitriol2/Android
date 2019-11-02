@@ -42,10 +42,6 @@ class MainActivity : AppCompatActivity() {
 
             //서버 통신
             callBack()
-
-            //정상 로그인
-            val intent = Intent(this@MainActivity, MenuActivity::class.java)
-            startActivity(intent)
         }
 
         //회원가입
@@ -80,6 +76,10 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<SignInData>, response: Response<SignInData>) {
                     if(response.isSuccessful) {
                         Toast.makeText(applicationContext, "정상 로그인", Toast.LENGTH_SHORT).show()
+
+                        //정상 로그인
+                        val intent = Intent(this@MainActivity, MenuActivity::class.java)
+                        startActivity(intent)
                     }
                     else {
                         Toast.makeText(applicationContext, "로그인 실패", Toast.LENGTH_SHORT).show() //로그인 실패

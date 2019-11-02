@@ -1,5 +1,6 @@
 package com.example.halloween_pop.Feature.Game
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.halloween_pop.Data.Game.Stage4PictureData
 import com.example.halloween_pop.Feature.API.ApiServiceImpl
+import com.example.halloween_pop.Feature.Menu.MenuActivity
 import com.example.halloween_pop.R
 import kotlinx.android.synthetic.main.activity_play.*
 import retrofit2.Call
@@ -27,7 +29,8 @@ class PlayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stage)
+        setContentView(R.layout.activity_play)
+
 
         var list = listOf("http://ghkdua1829.dothome.co.kr/id/20190728151519.png","2","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","4",
             "http://ghkdua1829.dothome.co.kr/id/20190728151519.png","6","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","8")
@@ -86,6 +89,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         two.setOnClickListener {
@@ -100,6 +105,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         three.setOnClickListener {
@@ -111,6 +118,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         four.setOnClickListener {
@@ -125,6 +134,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         five.setOnClickListener {
@@ -142,6 +153,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         six.setOnClickListener {
@@ -156,6 +169,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         seven.setOnClickListener {
@@ -167,6 +182,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         eight.setOnClickListener {
@@ -181,6 +198,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
         nine.setOnClickListener {
@@ -192,6 +211,8 @@ class PlayActivity : AppCompatActivity() {
             }
             if(success(list)){
                 Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@PlayActivity, StageActivity::class.java)
+                startActivity(intent)
             }
         }
     }

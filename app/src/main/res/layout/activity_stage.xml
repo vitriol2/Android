@@ -12,18 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
         android:layout_marginLeft="148dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/francis_"
         android:lineSpacingExtra="16sp"
         android:shadowColor="#000000"
         android:shadowDx="3"
         android:shadowDy="5"
         android:shadowRadius="10"
+        android:text="level"
         android:textColor="#fac92c"
         android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="level" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Stage_back"

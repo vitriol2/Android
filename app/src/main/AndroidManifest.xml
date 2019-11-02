@@ -10,11 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Feature.Game.StageActivity"></activity>
         <activity android:name=".Feature.Ranking.RankingActivity" />
         <activity android:name=".Feature.Menu.MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Feature.SignIn.MainActivity" />
+        <activity android:name=".Feature.SignUp.SignUpActivity" />
+        <activity android:name=".Feature.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

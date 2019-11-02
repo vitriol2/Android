@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.halloween_pop.Feature.Game.StageActivity
 import com.example.halloween_pop.Feature.Ranking.RankingActivity
 import com.example.halloween_pop.R
 
@@ -21,7 +22,8 @@ class MenuActivity : AppCompatActivity() {
         config = findViewById(R.id.config)
 
         start.setOnClickListener {
-
+             var intent  = Intent(this, StageActivity::class.java)
+            startActivity(intent)
         }
 
         rank.setOnClickListener {

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".Feature.Game.StageActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/level_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/time_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="144dp"
+        android:lineSpacingExtra="2.4sp"
+        android:text="00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fac92c"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="2.4sp"
+        android:textColor="#fac92c"
+        android:textSize="24sp"
+        android:id="@+id/textView6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/minTextView"
+        app:layout_constraintStart_toEndOf="@+id/minTextView" android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"/>
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="2.4sp"
+        android:textColor="#fac92c"
+        android:textSize="24sp"
+        android:id="@+id/secTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView6" android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"/>
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="2.4sp"
+        android:textColor="#fac92c"
+        android:textSize="12sp"
+        android:id="@+id/milliTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/secTextView" android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" app:layout_constraintStart_toEndOf="@+id/secTextView"/>
+
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="83dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/one"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/two"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/three"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/four"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/five"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/six"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+        v
+
+        <ImageView
+            android:id="@+id/seven"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/eight"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/nine"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="fitXY"/>
+    </GridLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/gameframe_ic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

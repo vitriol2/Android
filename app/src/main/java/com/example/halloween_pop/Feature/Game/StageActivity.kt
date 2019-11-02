@@ -2,11 +2,17 @@ package com.example.halloween_pop.Feature.Game
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.example.halloween_pop.Data.Game.Stage4PictureData
+import com.example.halloween_pop.Feature.API.RankingServiceImpl
 import com.example.halloween_pop.R
 import kotlinx.android.synthetic.main.activity_stage.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 import java.util.Collections.shuffle
 import kotlin.concurrent.timer
@@ -26,6 +32,27 @@ class StageActivity : AppCompatActivity() {
         var list = listOf("http://ghkdua1829.dothome.co.kr/id/20190728151519.png","2","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","4",
             "http://ghkdua1829.dothome.co.kr/id/20190728151519.png","6","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","8")
 
+        val call: Call<Stage4PictureData> = RankingServiceImpl.service.getstagePicture("4")
+
+        call.enqueue(
+            object :Callback<Stage4PictureData>{
+                override fun onFailure(call: Call<Stage4PictureData>, t: Throwable) {
+                    Log.e("err",t.toString())
+                }
+
+                override fun onResponse(
+                    call: Call<Stage4PictureData>,
+                    response: Response<Stage4PictureData>
+                ) {
+                    if(response.isSuccessful){
+                        val gitStage=response.body()!!
+                        list=gitStage.lst
+                        Log.e("list? ",""+list)
+                        Log.e("sss",""+gitStage)
+                    }
+                }
+            }
+        )
         start()
 
         one.setTag(list[0])

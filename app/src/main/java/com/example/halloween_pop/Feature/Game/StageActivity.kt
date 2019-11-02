@@ -7,9 +7,17 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.halloween_pop.R
 import kotlinx.android.synthetic.main.activity_stage.*
+import java.util.*
 import java.util.Collections.shuffle
+import kotlin.concurrent.timer
 
 class StageActivity : AppCompatActivity() {
+
+    private var time = 0
+    private var isRunning = false
+    private var timerTask: Timer? = null
+    private var lap = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +25,8 @@ class StageActivity : AppCompatActivity() {
 
         var list = listOf("http://ghkdua1829.dothome.co.kr/id/20190728151519.png","2","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","4",
             "http://ghkdua1829.dothome.co.kr/id/20190728151519.png","6","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","8")
+
+        start()
 
         one.setTag(list[0])
         two.setTag(list[1])
@@ -38,9 +48,8 @@ class StageActivity : AppCompatActivity() {
         Glide.with(this).load(eight.getTag().toString()).into(eight)
         Glide.with(this).load(nine.getTag().toString()).into(nine)
 
-        shuffle.setOnClickListener {
             Shuffle(list)
-        }
+
         one.setOnClickListener {
             if(four.getTag().equals("기준")){
                 change(one,four)
@@ -197,4 +206,45 @@ class StageActivity : AppCompatActivity() {
         else
             return false
     }
+
+    private fun start() { //타이머 스타트
+
+        timerTask = timer(period = 10) {
+            // period = 10 0.01초 , period = 1000 면 1초
+            time++
+            // 0.01초마다 변수를 증가시킴
+
+            val hour = (time / 144000) % 24 // 1시간
+            val min = (time / 6000) % 60 // 1분
+            val sec = (time / 100) % 60 //1초
+            val milli = time % 100 // 0.01 초
+            runOnUiThread {
+                // Ui 를 갱신 시킴.
+
+                if (min < 10) { // 분
+                    minTextView.text = "0$min"
+                } else {
+                    minTextView.text = "$min"
+                }
+
+                if (sec < 10) { // 초
+                    secTextView.text = "0$sec"
+                } else {
+                    secTextView.text = "$sec"
+                }
+
+                if (milli < 10){
+                    milliTextView.text = "0$milli"
+                }else {
+                    milliTextView.text = "$milli"
+                }
+
+                //$ 를 붙여주면 변하는 값을 계속 덮어준다
+                //ex) $를 붙여주면 기존에 1이라는 값이 잇을때 값이 2로변하면 2로 바꿔준다.
+
+            }
+        }
+    }
+
+
 }

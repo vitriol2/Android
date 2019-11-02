@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Feature.Game.StageActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Feature.Ranking.RankingActivity" />
         <activity android:name=".Feature.Menu.MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Feature.Game.StageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

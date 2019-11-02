@@ -12,8 +12,5 @@ interface ApiService{
         @Path("rank") rank : String
     ) : Call<List<RankingData>>
 
-    @GET("/api/img")
-    fun getImage(
-    ) : Call<StageData>
 
 }

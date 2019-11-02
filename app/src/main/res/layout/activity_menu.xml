@@ -18,6 +18,7 @@
         android:fontFamily="@font/francis_"
         android:text="GAMESTART"
         android:textSize="45sp"
+        android:background="@drawable/button_drawable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

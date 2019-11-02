@@ -27,7 +27,7 @@
 
 
     <ImageView
-        android:id="@+id/background"
+        android:id="@+id/Stage_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ranking_background"

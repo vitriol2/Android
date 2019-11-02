@@ -8,9 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.halloween_pop.Data.Ranking.RankingData
-import com.example.halloween_pop.Feature.API.RankingServiceImpl
+import com.example.halloween_pop.Feature.API.ApiServiceImpl
 import com.example.halloween_pop.R
-import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,10 +36,10 @@ class RankingActivity : AppCompatActivity() {
         var title : TextView = findViewById(R.id.rank_title)
         var id : TextView = findViewById(R.id.nickname)
         var score : TextView = findViewById(R.id.score)
-        var back : ImageView = findViewById(R.id.background)
+        var back : ImageView = findViewById(R.id.Stage_back)
 
         // 서버 통신해서 데이터 받아 어댑터에 장착해주는 작업 필요
-        val call : Call<List<RankingData>> = RankingServiceImpl.service.getRank("ranks")
+        val call : Call<List<RankingData>> = ApiServiceImpl.SERVICE.getRank("ranks")
         call.enqueue(
             object : Callback<List<RankingData>>{
                 override fun onFailure(call: Call<List<RankingData>>, t: Throwable) {

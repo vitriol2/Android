@@ -6,4 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".Feature.Game.StageActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/francis_"
+        android:lineSpacingExtra="16sp"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:textColor="#fac92c"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="level" />
+
+    <ImageView
+        android:id="@+id/Stage_back"
+        android:layout_width="399dp"
+        android:layout_height="548dp"
+        android:background="@drawable/ranking_background"
+        android:paddingLeft="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/Stage1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintStart_toStartOf="@+id/Stage_back"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/Stage2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage1"
+        app:layout_constraintStart_toEndOf="@+id/Stage1"
+        app:layout_constraintTop_toTopOf="@+id/Stage1" />
+
+    <ImageView
+        android:id="@+id/Stage3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage2"
+        app:layout_constraintStart_toEndOf="@+id/Stage2"
+        app:layout_constraintTop_toTopOf="@+id/Stage2"
+         />
+
+    <ImageView
+        android:id="@+id/Stage4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintEnd_toEndOf="@+id/Stage1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Stage1"
+        app:layout_constraintTop_toBottomOf="@+id/Stage1" />
+
+    <ImageView
+        android:id="@+id/Stage5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage4"
+        app:layout_constraintStart_toEndOf="@+id/Stage4"
+        app:layout_constraintTop_toTopOf="@+id/Stage4" />
+
+    <ImageView
+        android:id="@+id/Stage6"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage5"
+        app:layout_constraintStart_toEndOf="@+id/Stage5"
+        app:layout_constraintTop_toTopOf="@+id/Stage5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/Stage7"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintEnd_toEndOf="@+id/Stage4"
+        app:layout_constraintStart_toStartOf="@+id/Stage4"
+        app:layout_constraintTop_toBottomOf="@+id/Stage4" />
+
+    <ImageView
+        android:id="@+id/Stage8"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage7"
+        app:layout_constraintStart_toEndOf="@+id/Stage7"
+        app:layout_constraintTop_toTopOf="@+id/Stage7" />
+
+    <ImageView
+        android:id="@+id/Stage9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/level_1"
+        app:layout_constraintBottom_toBottomOf="@+id/Stage8"
+        app:layout_constraintStart_toEndOf="@+id/Stage8"
+        app:layout_constraintTop_toTopOf="@+id/Stage8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

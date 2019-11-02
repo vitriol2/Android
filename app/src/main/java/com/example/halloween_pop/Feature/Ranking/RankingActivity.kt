@@ -37,7 +37,7 @@ class RankingActivity : AppCompatActivity() {
         var title : TextView = findViewById(R.id.rank_title)
         var id : TextView = findViewById(R.id.nickname)
         var score : TextView = findViewById(R.id.score)
-        var back : ImageView = findViewById(R.id.background)
+//        var back : ImageView = findViewById(R.id.background)
 
         // 서버 통신해서 데이터 받아 어댑터에 장착해주는 작업 필요
         val call : Call<List<RankingData>> = RankingServiceImpl.service.getRank("ranks")

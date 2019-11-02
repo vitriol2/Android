@@ -29,8 +29,8 @@
 
     <ImageView
         android:id="@+id/Stage_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="349dp"
+        android:layout_height="470dp"
         android:background="@drawable/ranking_background"
         app:layout_constraintEnd_toEndOf="@+id/rank_title"
         app:layout_constraintHorizontal_bias="0.494"

@@ -9,6 +9,12 @@
     tools:context=".Feature.Game.StageActivity">
 
     <ImageView
+        android:id="@+id/win_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/win_img"
+        android:visibility="gone"/>
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="72dp"
         android:layout_height="91dp"
@@ -132,7 +138,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:scaleType="fitXY"/>
-        v
+
 
         <ImageView
             android:id="@+id/seven"

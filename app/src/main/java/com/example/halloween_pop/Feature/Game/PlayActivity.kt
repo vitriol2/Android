@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
@@ -35,7 +36,10 @@ class PlayActivity : AppCompatActivity() {
         var list = listOf("http://ghkdua1829.dothome.co.kr/id/20190728151519.png","2","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","4",
             "http://ghkdua1829.dothome.co.kr/id/20190728151519.png","6","http://ghkdua1829.dothome.co.kr/id/20190728151519.png","8")
 
-        val call: Call<Stage4PictureData> = ApiServiceImpl.SERVICE.getstagePicture("4")
+        val intent = getIntent()
+        var number : String = intent.getStringExtra("num")
+        Log.d("num",number)
+        val call: Call<Stage4PictureData> = ApiServiceImpl.SERVICE.getstagePicture(number)
 
         call.enqueue(
             object : Callback<Stage4PictureData> {
@@ -50,35 +54,36 @@ class PlayActivity : AppCompatActivity() {
                     if(response.isSuccessful){
                         val gitStage=response.body()!!
                         list=gitStage.lst
+                        one.setTag(list[0])
+                        two.setTag(list[1])
+                        three.setTag(list[2])
+                        four.setTag(list[3])
+                        five.setTag(list[4])
+                        six.setTag(list[5])
+                        seven.setTag(list[6])
+                        eight.setTag(list[7])
+                        nine.setTag("기준")
+
+                        Glide.with(this@PlayActivity).load(one.getTag().toString()).into(one)
+                        Glide.with(this@PlayActivity).load(two.getTag().toString()).into(two)
+                        Glide.with(this@PlayActivity).load(three.getTag().toString()).into(three)
+                        Glide.with(this@PlayActivity).load(four.getTag().toString()).into(four)
+                        Glide.with(this@PlayActivity).load(five.getTag().toString()).into(five)
+                        Glide.with(this@PlayActivity).load(six.getTag().toString()).into(six)
+                        Glide.with(this@PlayActivity).load(seven.getTag().toString()).into(seven)
+                        Glide.with(this@PlayActivity).load(eight.getTag().toString()).into(eight)
+                        Glide.with(this@PlayActivity).load(nine.getTag().toString()).into(nine)
+
+                        Shuffle(list)
+
                         Log.e("list? ",""+list)
                         Log.e("sss",""+gitStage)
                     }
                 }
             }
         )
+
         start()
-
-        one.setTag(list[0])
-        two.setTag(list[1])
-        three.setTag(list[2])
-        four.setTag(list[3])
-        five.setTag(list[4])
-        six.setTag(list[5])
-        seven.setTag(list[6])
-        eight.setTag(list[7])
-        nine.setTag("기준")
-
-        Glide.with(this).load(one.getTag().toString()).into(one)
-        Glide.with(this).load(two.getTag().toString()).into(two)
-        Glide.with(this).load(three.getTag().toString()).into(three)
-        Glide.with(this).load(four.getTag().toString()).into(four)
-        Glide.with(this).load(five.getTag().toString()).into(five)
-        Glide.with(this).load(six.getTag().toString()).into(six)
-        Glide.with(this).load(seven.getTag().toString()).into(seven)
-        Glide.with(this).load(eight.getTag().toString()).into(eight)
-        Glide.with(this).load(nine.getTag().toString()).into(nine)
-
-        Shuffle(list)
 
         one.setOnClickListener {
             if(four.getTag().equals("기준")){
@@ -88,7 +93,8 @@ class PlayActivity : AppCompatActivity() {
                 change(one,two)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -104,7 +110,8 @@ class PlayActivity : AppCompatActivity() {
                 change(two,five)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -117,7 +124,8 @@ class PlayActivity : AppCompatActivity() {
                 change(three,six)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -133,7 +141,8 @@ class PlayActivity : AppCompatActivity() {
                 change(four,seven)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -152,7 +161,8 @@ class PlayActivity : AppCompatActivity() {
                 change(five,eight)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -168,7 +178,8 @@ class PlayActivity : AppCompatActivity() {
                 change(six,nine)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -181,7 +192,8 @@ class PlayActivity : AppCompatActivity() {
                 change(seven,eight)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -197,7 +209,8 @@ class PlayActivity : AppCompatActivity() {
                 change(eight,nine)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }
@@ -210,7 +223,8 @@ class PlayActivity : AppCompatActivity() {
                 change(nine,eight)
             }
             if(success(list)){
-                Toast.makeText(this,"성공!", Toast.LENGTH_SHORT).show()
+                win_img.bringToFront()
+                win_img.visibility= View.VISIBLE
                 val intent = Intent(this@PlayActivity, StageActivity::class.java)
                 startActivity(intent)
             }

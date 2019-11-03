@@ -23,48 +23,59 @@ class StageActivity : AppCompatActivity() {
         val image9 : ImageView = findViewById(R.id.Stage9)
 
 
+
+
         image1.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","1")
             startActivity(intent)
 
         }
         image2.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","2")
             startActivity(intent)
 
         }
         image3.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","3")
             startActivity(intent)
 
         }
         image4.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","4")
             startActivity(intent)
 
         }
         image5.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","5")
             startActivity(intent)
 
         }
         image6.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","6")
             startActivity(intent)
 
         }
         image7.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","7")
             startActivity(intent)
 
         }
         image8.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","8")
             startActivity(intent)
 
         }
         image9.setOnClickListener{
             intent = Intent(this,PlayActivity::class.java)
+            intent.putExtra("num","9")
             startActivity(intent)
 
         }

@@ -5,6 +5,7 @@ import com.example.halloween_pop.Data.Game.StageData
 import com.example.halloween_pop.Data.Ranking.RankingData
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService{
